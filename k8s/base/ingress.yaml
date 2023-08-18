@@ -5,8 +5,9 @@ metadata:
   labels:
     name: team-portfolio
   annotations:
-    kubernetes.io/ingress.class: "gce"
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: "nginx"
   rules:
     - http:
         paths:
