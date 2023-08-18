@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: team-portfolio
+  labels:
+    name: team-portfolio
+  annotations:
+    kubernetes.io/ingress.class: "gce"
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /team-portfolio
+            pathType: Prefix
+            backend:
+              service:
+                name: team-portfolio
+                port:
+                  number: 80
