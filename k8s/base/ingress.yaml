@@ -4,8 +4,6 @@ metadata:
   name: team-portfolio
   labels:
     name: team-portfolio
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: "nginx"
   rules:
